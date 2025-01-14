@@ -5,6 +5,7 @@ cd /home/fqf/fqf_folder/01_Git/nuplan-devkit
 
 conda create --name nuplan python=3.9
 conda activate nuplan
+python -m pip install pip==24.0  -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install -e .
 pip install -r ./requirements.txt
 pip install -r requirements_torch.txt【服务器貌似需要ssl证书，所以改用：pip install --trusted-host download.pytorch.org --trusted-host data.pyg.org -r requirements_torch.txt】
